@@ -1,0 +1,4013 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Referência da API - Quadros de Saúde</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#referencia-da-api" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Quadros de Saúde" class="md-header__button md-logo" aria-label="Quadros de Saúde" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Quadros de Saúde
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Referência da API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/drandreq/quadrosdesaude" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    drandre/quadrosdesaude
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Quadros de Saúde" class="md-nav__button md-logo" aria-label="Quadros de Saúde" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Quadros de Saúde
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/drandreq/quadrosdesaude" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    drandre/quadrosdesaude
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Referência da API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Referência da API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orquestracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orquestração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.orquestrador.orquestrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      orquestrador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processamento-atomico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processamento Atomico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.orquestrador.dbc2parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbc2parquet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-de-conversao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções de Conversão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.dbc2dbf" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbc2dbf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.dbf2parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbf2parquet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.harmonizar_registos_em_fluxo" class="md-nav__link">
+    <span class="md-ellipsis">
+      harmonizar_registos_em_fluxo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracao-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extração FTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTPDownloader
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FTPDownloader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.lista_arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      lista_arquivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.download_arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_arquivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.download_pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_pasta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilitários
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.formatar_tamanho" class="md-nav__link">
+    <span class="md-ellipsis">
+      formatar_tamanho
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.medir_tamanho_pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      medir_tamanho_pasta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.limpador_" class="md-nav__link">
+    <span class="md-ellipsis">
+      limpador_
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsers-internos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsers Internos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.parser.StringFieldParser" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringFieldParser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StringFieldParser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.parser.StringFieldParser.parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcao-de-descompressao-c-descomprimir_dbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Função de Descompressão C (descomprimir_dbc)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orquestracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orquestração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.orquestrador.orquestrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      orquestrador
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processamento-atomico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processamento Atomico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.orquestrador.dbc2parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbc2parquet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-de-conversao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções de Conversão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.dbc2dbf" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbc2dbf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.dbf2parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      dbf2parquet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.conversor.harmonizar_registos_em_fluxo" class="md-nav__link">
+    <span class="md-ellipsis">
+      harmonizar_registos_em_fluxo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extracao-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extração FTP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTPDownloader
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FTPDownloader">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.lista_arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      lista_arquivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.download_arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_arquivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.extracao.ftp.FTPDownloader.download_pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_pasta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilitários
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.formatar_tamanho" class="md-nav__link">
+    <span class="md-ellipsis">
+      formatar_tamanho
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.medir_tamanho_pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      medir_tamanho_pasta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.utils.limpador_" class="md-nav__link">
+    <span class="md-ellipsis">
+      limpador_
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsers-internos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsers Internos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.parser.StringFieldParser" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringFieldParser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StringFieldParser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadrosdesaude.conversao.parser.StringFieldParser.parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcao-de-descompressao-c-descomprimir_dbc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Função de Descompressão C (descomprimir_dbc)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="referencia-da-api">Referência da API</h1>
+<p>Esta secção contém a documentação gerada automaticamente a partir do código fonte do pacote <code>quadrosdesaude</code>.</p>
+<h2 id="orquestracao">Orquestração</h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.conversao.orquestrador.orquestrador" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.conversao.orquestrador.orquestrador</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">orquestrador</span><span class="p">(</span><span class="n">pasta_origem_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_destino_parquet</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp_dbf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_dbf&#39;</span><span class="p">,</span> <span class="n">pasta_temp_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_parquet&#39;</span><span class="p">,</span> <span class="n">max_workers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Orquestra o processamento completo de uma pasta de arquivos .DBC.</p>
+<p>Esta função gerencia o pipeline DBC -&gt; DBF Temporário -&gt; Parquet Final -&gt; Mover ao destino,
+utilizando multithreading para processar cada ficheiro de forma 
+atomica e paralela. TODO: Incluir verificação de arquivos existentes</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_origem_dbc</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho para a pasta contendo os arquivos .dbc (origem).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_destino_parquet</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho para a pasta onde os ficheiros .parquet 
+convertidos com sucesso serão guardados.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp_dbf</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho para pasta temporária onde os arquivos .dbc 
+descomprimidos para .dbf com sucesso devem aguardar</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_dbf&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp_parquet</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho para pasta temporária onde os arquivos .parquet 
+são escritos e verificados antes de seguirem pra pasta_detino_parquet.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_parquet&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_workers</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O número máximo de threads a serem usadas para o processamento 
+paralelo. O valor padrão é 1.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tamanho_lote</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O número de registos a serem processados de cada vez durante 
+a conversão DBF -&gt; Parquet. O valor padrão é 100000.</p>
+              </div>
+            </td>
+            <td>
+                  <code>100000</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+        <p>Returns:
+  None. A função executa o processo e move o resultado (arquivo .parquet) para pasta destino.</p>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se a pasta de origem não for encontrada.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\orquestrador.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">orquestrador</span><span class="p">(</span>
+  <span class="n">pasta_origem_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">pasta_destino_parquet</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+  <span class="n">pasta_temp_dbf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_dbf&#39;</span><span class="p">,</span>
+  <span class="n">pasta_temp_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_parquet&#39;</span><span class="p">,</span>
+  <span class="n">max_workers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Orquestra o processamento completo de uma pasta de arquivos .DBC.</span>
+
+<span class="sd">    Esta função gerencia o pipeline DBC -&gt; DBF Temporário -&gt; Parquet Final -&gt; Mover ao destino,</span>
+<span class="sd">    utilizando multithreading para processar cada ficheiro de forma </span>
+<span class="sd">    atomica e paralela. TODO: Incluir verificação de arquivos existentes</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pasta_origem_dbc: Caminho para a pasta contendo os arquivos .dbc (origem).</span>
+<span class="sd">        pasta_destino_parquet: Caminho para a pasta onde os ficheiros .parquet </span>
+<span class="sd">          convertidos com sucesso serão guardados.</span>
+<span class="sd">        pasta_temp_dbf: Caminho para pasta temporária onde os arquivos .dbc </span>
+<span class="sd">          descomprimidos para .dbf com sucesso devem aguardar</span>
+<span class="sd">        pasta_temp_parquet: Caminho para pasta temporária onde os arquivos .parquet </span>
+<span class="sd">          são escritos e verificados antes de seguirem pra pasta_detino_parquet.</span>
+<span class="sd">        max_workers: O número máximo de threads a serem usadas para o processamento </span>
+<span class="sd">          paralelo. O valor padrão é 1.</span>
+<span class="sd">        tamanho_lote: O número de registos a serem processados de cada vez durante </span>
+<span class="sd">          a conversão DBF -&gt; Parquet. O valor padrão é 100000.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">      None. A função executa o processo e move o resultado (arquivo .parquet) para pasta destino.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">      FileNotFoundError: Se a pasta de origem não for encontrada.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="k">for</span> <span class="n">pasta</span> <span class="ow">in</span> <span class="p">[</span><span class="n">pasta_temp_dbf</span><span class="p">,</span> <span class="n">pasta_temp_parquet</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">pasta</span><span class="p">):</span>
+      <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">pasta</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pasta</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="n">arquivos_dbc</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span> <span class="n">Path</span><span class="p">(</span> <span class="n">pasta_origem_dbc</span> <span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span> <span class="s1">&#39;*.[dD][bB][cC]&#39;</span> <span class="p">)</span> <span class="p">)</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">arquivos_dbc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nenhum ficheiro .dbc encontrado na pasta de origem.&quot;</span><span class="p">)</span>
+    <span class="k">return</span>
+
+  <span class="n">sucessos</span><span class="p">,</span> <span class="n">falhas</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+  <span class="n">start_time_total</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+
+  <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+    <span class="n">progress_bar</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span> <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arquivos_dbc</span><span class="p">),</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Processando Ficheiros&quot;</span> <span class="p">)</span>
+    <span class="n">operacao</span> <span class="o">=</span> <span class="s1">&#39;lote&#39;</span>
+    <span class="n">futuros</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">caminho_dbc</span> <span class="ow">in</span> <span class="n">arquivos_dbc</span><span class="p">:</span>
+      <span class="n">futuro</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">dbc2parquet</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">),</span> <span class="n">pasta_destino_parquet</span><span class="p">,</span> <span class="n">pasta_temp_dbf</span><span class="p">,</span> <span class="n">pasta_temp_parquet</span><span class="p">,</span> <span class="n">operacao</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="p">)</span>
+      <span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="k">for</span> <span class="n">futuro</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futuros</span><span class="p">):</span>
+        <span class="n">nome_base</span><span class="p">,</span> <span class="n">sucesso</span><span class="p">,</span> <span class="n">mensagem</span> <span class="o">=</span> <span class="n">futuro</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">sucesso</span><span class="p">:</span>
+          <span class="n">sucessos</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">nome_base</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">mensagem</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+          <span class="n">falhas</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">progress_bar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">progress_bar</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">🛑 INTERRUPÇÃO DETECTADA PELO USUÁRIO.&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encerrando o executor e cancelando tarefas pendentes... Por favor, aguarde.&quot;</span><span class="p">)</span>
+      <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">cancel_futures</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+      <span class="k">return</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">ERRO CRÍTICO: Interrompendo processamento...&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Detalhes: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">cancel_futures</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+      <span class="k">return</span>
+
+  <span class="n">duration_total</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time_total</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processamento concluído em </span><span class="si">{</span><span class="n">duration_total</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> segundos.&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sucessos: </span><span class="si">{</span><span class="n">sucessos</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Falhas: </span><span class="si">{</span><span class="n">falhas</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><p>options:
+    show_source: true</p>
+<h2 id="processamento-atomico">Processamento Atomico</h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.conversao.orquestrador.dbc2parquet" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.conversao.orquestrador.dbc2parquet</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">dbc2parquet</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">destino_parquet</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp_dbf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_dbf&#39;</span><span class="p">,</span> <span class="n">pasta_temp_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_parquet&#39;</span><span class="p">,</span> <span class="n">operacao</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lote&#39;</span><span class="p">,</span> <span class="s1">&#39;unico&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;unico&#39;</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="nb">bool</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Processa um único arquivo .dbc convertendo-o para o formato Parquet.</p>
+<p>Executa um pipeline completo de forma atomica para um unico arquivo:
+1. Descomprime o arquivo .dbc para um arquivo .dbf temporário.
+2. Converte o arquivo .dbf temporário para um arquivo .parquet temporário,
+  processando em lotes e verificando a contagem de linhas no final.
+3. Se a conversão e verificação forem bem-sucedidas, move o arquivo 
+  .parquet temporário para a pasta de destino final.
+4. Limpa todos os arquivos temporários (.dbf e .parquet) criados durante o processo.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_dbc</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho completo para o arquivo .dbc de entrada.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>destino_parquet</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho para a pasta onde o arquivo .parquet final 
+(convertido com sucesso) deve ser guardado.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp_dbf</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Diretório para armazenar o arquivo .dbf temporário 
+durante o processamento. O valor padrão é './temp_dbf'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_dbf&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp_parquet</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Diretório para armazenar o arquivo .parquet 
+temporário antes da verificação e movimentação final. 
+O valor padrão é './temp_parquet'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_parquet&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>operacao</code>
+            </td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[&#39;lote&#39;, &#39;unico&#39;]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Define o formato do valor de retorno.
+'lote': Retorna uma tupla detalhada (nome_base, sucesso, mensagem).
+'unico': Retorna apenas um booleano (True para sucesso, False para falha).</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;unico&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tamanho_lote</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Número de registos a processar de cada vez durante a 
+conversão DBF -&gt; Parquet para otimizar o uso de memória. 
+O valor padrão é 100000.</p>
+              </div>
+            </td>
+            <td>
+                  <code>100000</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Union">Union</span>[<span title="typing.Tuple">Tuple</span>[<span title="str">str</span>, <span title="bool">bool</span>, <span title="str">str</span>], <span title="bool">bool</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
+<li>Se operacao='lote': Uma tupla contendo:</li>
+<li>nome_base (str): O nome do arquivo .dbc original.</li>
+<li>sucesso (bool): True se todo o processo foi bem-sucedido, False caso contrário.</li>
+<li>mensagem (str): Uma mensagem descrevendo o resultado ou o erro.</li>
+</ul>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Union">Union</span>[<span title="typing.Tuple">Tuple</span>[<span title="str">str</span>, <span title="bool">bool</span>, <span title="str">str</span>], <span title="bool">bool</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
+<li>Se operacao='unico': </li>
+<li>True se todo o processo foi bem-sucedido.</li>
+<li>False se ocorreu alguma falha em qualquer etapa.</li>
+</ul>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se o arquivo <code>caminho_dbc</code> não for encontrado (lançado por <code>dbc2dbf</code> ou <code>dbf2parquet</code>).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Captura e relança outras exceções que podem ocorrer durante a 
+descompressão, conversão ou movimentação de arquivos (ex: erros de permissão,
+disco cheio, arquivo corrompido). A mensagem de erro original é incluída.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\orquestrador.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dbc2parquet</span><span class="p">(</span>
+  <span class="n">caminho_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+  <span class="n">destino_parquet</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+  <span class="n">pasta_temp_dbf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_dbf&#39;</span><span class="p">,</span>
+  <span class="n">pasta_temp_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_parquet&#39;</span><span class="p">,</span> 
+  <span class="n">operacao</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;lote&#39;</span><span class="p">,</span> <span class="s1">&#39;unico&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;unico&#39;</span><span class="p">,</span> 
+  <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span> <span class="n">Tuple</span><span class="p">[</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">str</span> <span class="p">],</span> <span class="nb">bool</span> <span class="p">]:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Processa um único arquivo .dbc convertendo-o para o formato Parquet.</span>
+
+<span class="sd">    Executa um pipeline completo de forma atomica para um unico arquivo:</span>
+<span class="sd">    1. Descomprime o arquivo .dbc para um arquivo .dbf temporário.</span>
+<span class="sd">    2. Converte o arquivo .dbf temporário para um arquivo .parquet temporário,</span>
+<span class="sd">      processando em lotes e verificando a contagem de linhas no final.</span>
+<span class="sd">    3. Se a conversão e verificação forem bem-sucedidas, move o arquivo </span>
+<span class="sd">      .parquet temporário para a pasta de destino final.</span>
+<span class="sd">    4. Limpa todos os arquivos temporários (.dbf e .parquet) criados durante o processo.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_dbc: O caminho completo para o arquivo .dbc de entrada.</span>
+<span class="sd">      destino_parquet: O caminho para a pasta onde o arquivo .parquet final </span>
+<span class="sd">        (convertido com sucesso) deve ser guardado.</span>
+<span class="sd">      pasta_temp_dbf: Diretório para armazenar o arquivo .dbf temporário </span>
+<span class="sd">        durante o processamento. O valor padrão é &#39;./temp_dbf&#39;.</span>
+<span class="sd">      pasta_temp_parquet: Diretório para armazenar o arquivo .parquet </span>
+<span class="sd">        temporário antes da verificação e movimentação final. </span>
+<span class="sd">        O valor padrão é &#39;./temp_parquet&#39;.</span>
+<span class="sd">      operacao: Define o formato do valor de retorno.</span>
+<span class="sd">        &#39;lote&#39;: Retorna uma tupla detalhada (nome_base, sucesso, mensagem).</span>
+<span class="sd">        &#39;unico&#39;: Retorna apenas um booleano (True para sucesso, False para falha).</span>
+<span class="sd">      O valor padrão é &#39;unico&#39;.</span>
+<span class="sd">      tamanho_lote: Número de registos a processar de cada vez durante a </span>
+<span class="sd">        conversão DBF -&gt; Parquet para otimizar o uso de memória. </span>
+<span class="sd">        O valor padrão é 100000.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      - Se operacao=&#39;lote&#39;: Uma tupla contendo:</span>
+<span class="sd">        - nome_base (str): O nome do arquivo .dbc original.</span>
+<span class="sd">        - sucesso (bool): True se todo o processo foi bem-sucedido, False caso contrário.</span>
+<span class="sd">        - mensagem (str): Uma mensagem descrevendo o resultado ou o erro.</span>
+<span class="sd">      - Se operacao=&#39;unico&#39;: </span>
+<span class="sd">        - True se todo o processo foi bem-sucedido.</span>
+<span class="sd">        - False se ocorreu alguma falha em qualquer etapa.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">      FileNotFoundError: Se o arquivo `caminho_dbc` não for encontrado (lançado por `dbc2dbf` ou `dbf2parquet`).</span>
+<span class="sd">      Exception: Captura e relança outras exceções que podem ocorrer durante a </span>
+<span class="sd">        descompressão, conversão ou movimentação de arquivos (ex: erros de permissão,</span>
+<span class="sd">        disco cheio, arquivo corrompido). A mensagem de erro original é incluída.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pasta_temp_dbf</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pasta_temp_parquet</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="n">nome_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">)</span>
+  <span class="n">nome_sem_ext</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span>
+
+  <span class="n">caminho_dbf_temp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pasta_temp_dbf</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nome_sem_ext</span><span class="si">}</span><span class="s2">.dbf&quot;</span><span class="p">)</span>
+  <span class="n">caminho_parquet_temp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pasta_temp_parquet</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nome_sem_ext</span><span class="si">}</span><span class="s2">.parquet&quot;</span><span class="p">)</span>
+  <span class="n">caminho_parquet_final</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">destino_parquet</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nome_sem_ext</span><span class="si">}</span><span class="s2">.parquet&quot;</span><span class="p">)</span>
+
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">dbc2dbf</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">,</span> <span class="n">caminho_dbf_temp</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dbf2parquet</span><span class="p">(</span><span class="n">caminho_dbf_temp</span><span class="p">,</span> <span class="n">caminho_parquet_temp</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="o">=</span><span class="n">tamanho_lote</span><span class="p">):</span>
+      <span class="k">try</span><span class="p">:</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">caminho_parquet_temp</span><span class="p">,</span> <span class="n">caminho_parquet_final</span><span class="p">)</span>
+      <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ERRO ao mover o arquivo </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">caminho_parquet_temp</span><span class="p">)</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+
+      <span class="k">if</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;lote&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">nome_base</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Sucesso com o arquivo </span><span class="si">{</span><span class="n">caminho_parquet_final</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+      <span class="k">elif</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;unico&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">else</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;lote&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">nome_base</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Falha: Dados incompletos com o arquivo </span><span class="si">{</span><span class="n">caminho_dbf_temp</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+      <span class="k">elif</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;unico&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;lote&#39;</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">(</span><span class="n">nome_base</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Falha com o arquivo </span><span class="si">{</span><span class="n">caminho_dbf_temp</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">operacao</span> <span class="o">==</span> <span class="s1">&#39;unico&#39;</span><span class="p">:</span>
+      <span class="k">return</span> <span class="kc">False</span>
+  <span class="k">finally</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_dbf_temp</span><span class="p">):</span>
+      <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">caminho_dbf_temp</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_parquet_temp</span><span class="p">):</span>
+      <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">caminho_parquet_temp</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><p>options:
+    show_source: true</p>
+<h2 id="funcoes-de-conversao">Funções de Conversão</h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.conversao.conversor.dbc2dbf" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.conversao.conversor.dbc2dbf</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">dbc2dbf</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">caminho_dbf</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Descomprime um único arquivo .dbc do DATASUS (PKWare) para o formato .dbf (dbase).</p>
+<p>Utiliza a função <code>descomprimir_dbc</code> (proveniente da extensão em C @danicat) para realizar
+a descompressão. Regista o tempo de execução e retorna um booleano
+indicando o sucesso da operação.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_dbc</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho completo para o arquivo .dbc de entrada.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_dbf</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho completo onde o arquivo .dbf descomprimido será guardado.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True se a descompressão foi bem-sucedida, False caso contrário.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se o <code>caminho_dbc</code> não for encontrado (lançado por <code>fopen</code> em C).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Outras exceções relacionadas a erros de I/O ou falhas na descompressão (originadas na extensão C).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\conversor.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dbc2dbf</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">caminho_dbf</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Descomprime um único arquivo .dbc do DATASUS (PKWare) para o formato .dbf (dbase).</span>
+
+<span class="sd">    Utiliza a função `descomprimir_dbc` (proveniente da extensão em C @danicat) para realizar</span>
+<span class="sd">    a descompressão. Regista o tempo de execução e retorna um booleano</span>
+<span class="sd">    indicando o sucesso da operação.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_dbc: Caminho completo para o arquivo .dbc de entrada.</span>
+<span class="sd">      caminho_dbf: Caminho completo onde o arquivo .dbf descomprimido será guardado.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      bool: True se a descompressão foi bem-sucedida, False caso contrário.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">      FileNotFoundError: Se o `caminho_dbc` não for encontrado (lançado por `fopen` em C).</span>
+<span class="sd">      Exception: Outras exceções relacionadas a erros de I/O ou falhas na descompressão (originadas na extensão C).</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">descomprimir_dbc</span><span class="p">(</span><span class="n">caminho_dbc</span><span class="p">,</span> <span class="n">caminho_dbf</span><span class="p">)</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+    <span class="k">return</span> <span class="kc">True</span>
+  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.conversao.conversor.dbf2parquet" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.conversao.conversor.dbf2parquet</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">dbf2parquet</span><span class="p">(</span><span class="n">caminho_dbf</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">destino_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Converte um arquivo .dbf para o formato Parquet de forma eficiente em memória.</p>
+<p>Lê o arquivo .dbf em lotes (chunks), harmoniza os registos para garantir
+um schema consistente (usando <code>harmonizar_registos_em_fluxo</code>), converte
+cada lote para um DataFrame Polars (forçando todas as colunas para String/Utf8),
+e escreve/anexa os lotes a um arquivo Parquet final usando PyArrow.
+No final, verifica se o número de linhas no Parquet gerado corresponde
+ao número de linhas reportado no cabeçalho do DBF.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_dbf</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho completo para o arquivo .dbf de entrada.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>destino_parquet</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Caminho completo onde o arquivo .parquet final
+será guardado. Se None, o nome será derivado do
+arquivo de entrada e salvo no diretório atual.
+Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>tamanho_lote</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Número de registos DBF a serem lidos e processados
+em memória de cada vez. Ajustar este valor pode
+impactar o uso de RAM e a velocidade. Valor padrão é 100000.</p>
+              </div>
+            </td>
+            <td>
+                  <code>100000</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>True se a conversão e a verificação de contagem de linhas
+foram bem-sucedidas, False caso contrário.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="FileNotFoundError">FileNotFoundError</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se o <code>caminho_dbf</code> não for encontrado.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dbfread.exceptions.DBFNotFound">DBFNotFound</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se o arquivo DBF não for válido ou estiver corrompido.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Outras exceções relacionadas a erros de I/O, falhas na
+escrita do Parquet, ou problemas de memória.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\conversor.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dbf2parquet</span><span class="p">(</span><span class="n">caminho_dbf</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">destino_parquet</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tamanho_lote</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converte um arquivo .dbf para o formato Parquet de forma eficiente em memória.</span>
+
+<span class="sd">    Lê o arquivo .dbf em lotes (chunks), harmoniza os registos para garantir</span>
+<span class="sd">    um schema consistente (usando `harmonizar_registos_em_fluxo`), converte</span>
+<span class="sd">    cada lote para um DataFrame Polars (forçando todas as colunas para String/Utf8),</span>
+<span class="sd">    e escreve/anexa os lotes a um arquivo Parquet final usando PyArrow.</span>
+<span class="sd">    No final, verifica se o número de linhas no Parquet gerado corresponde</span>
+<span class="sd">    ao número de linhas reportado no cabeçalho do DBF.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_dbf: Caminho completo para o arquivo .dbf de entrada.</span>
+<span class="sd">      destino_parquet: Caminho completo onde o arquivo .parquet final</span>
+<span class="sd">        será guardado. Se None, o nome será derivado do</span>
+<span class="sd">        arquivo de entrada e salvo no diretório atual.</span>
+<span class="sd">        Valor padrão é None.</span>
+<span class="sd">      tamanho_lote: Número de registos DBF a serem lidos e processados</span>
+<span class="sd">        em memória de cada vez. Ajustar este valor pode</span>
+<span class="sd">        impactar o uso de RAM e a velocidade. Valor padrão é 100000.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      bool: True se a conversão e a verificação de contagem de linhas</span>
+<span class="sd">        foram bem-sucedidas, False caso contrário.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">      FileNotFoundError: Se o `caminho_dbf` não for encontrado.</span>
+<span class="sd">      dbfread.exceptions.DBFNotFound: Se o arquivo DBF não for válido ou estiver corrompido.</span>
+<span class="sd">      Exception: Outras exceções relacionadas a erros de I/O, falhas na</span>
+<span class="sd">        escrita do Parquet, ou problemas de memória.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">destino_parquet</span><span class="p">:</span>
+    <span class="n">nome_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">caminho_dbf</span><span class="p">)</span>
+    <span class="n">destino_parquet</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">nome_base</span><span class="si">}</span><span class="s1">.parquet&#39;</span>
+
+  <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+  <span class="n">writer</span> <span class="o">=</span> <span class="kc">None</span>
+  <span class="n">total_linhas_processadas</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">tabela_dbf</span> <span class="o">=</span> <span class="n">DBF</span><span class="p">(</span><span class="n">caminho_dbf</span><span class="p">,</span> <span class="n">parserclass</span> <span class="o">=</span> <span class="n">StringFieldParser</span><span class="p">)</span>
+    <span class="n">schema_mestre</span> <span class="o">=</span> <span class="n">tabela_dbf</span><span class="o">.</span><span class="n">field_names</span>
+    <span class="n">total_linhas_cabecalho</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tabela_dbf</span><span class="p">)</span>
+
+    <span class="n">gerador_harmonizado</span> <span class="o">=</span> <span class="n">harmonizar_registos_em_fluxo</span><span class="p">(</span> <span class="nb">iter</span><span class="p">(</span> <span class="n">tabela_dbf</span> <span class="p">),</span> <span class="n">schema_mestre</span> <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">lote_de_registros</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span> <span class="k">lambda</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span> <span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span> <span class="n">gerador_harmonizado</span><span class="p">,</span> <span class="n">tamanho_lote</span> <span class="p">)</span> <span class="p">),</span> <span class="p">[]</span> <span class="p">):</span>
+      <span class="n">df_lote</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="n">lote_de_registros</span><span class="p">,</span> <span class="n">schema_overrides</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="n">pl</span><span class="o">.</span><span class="n">Utf8</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">schema_mestre</span><span class="p">}</span> <span class="p">)</span>
+      <span class="n">tabela_arrow</span> <span class="o">=</span> <span class="n">df_lote</span><span class="o">.</span><span class="n">to_arrow</span><span class="p">()</span>
+      <span class="k">if</span> <span class="n">writer</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">ParquetWriter</span><span class="p">(</span><span class="n">destino_parquet</span><span class="p">,</span> <span class="n">tabela_arrow</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span>
+      <span class="n">writer</span><span class="o">.</span><span class="n">write_table</span><span class="p">(</span><span class="n">tabela_arrow</span><span class="p">)</span>
+      <span class="n">total_linhas_processadas</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_lote</span><span class="p">)</span>
+      <span class="k">del</span> <span class="n">lote_de_registros</span><span class="p">,</span> <span class="n">df_lote</span><span class="p">,</span> <span class="n">tabela_arrow</span>
+      <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">writer</span><span class="p">:</span>
+      <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">linhas_no_parquet</span> <span class="o">=</span> <span class="n">pq</span><span class="o">.</span><span class="n">ParquetFile</span><span class="p">(</span><span class="n">destino_parquet</span><span class="p">)</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">num_rows</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+
+    <span class="k">if</span> <span class="n">total_linhas_cabecalho</span> <span class="o">==</span> <span class="n">linhas_no_parquet</span><span class="p">:</span>
+      <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Falha no dbf2parquet do arquivo </span><span class="si">{</span><span class="n">caminho_dbf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">False</span>
+  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Falha crítica ao processar dbf2parquet do arquivo </span><span class="si">{</span><span class="n">caminho_dbf</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">lote_de_registros</span><span class="p">,</span> <span class="n">df_lote</span><span class="p">,</span> <span class="n">tabela_arrow</span>
+    <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">writer</span><span class="p">:</span>
+      <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.conversao.conversor.harmonizar_registos_em_fluxo" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.conversao.conversor.harmonizar_registos_em_fluxo</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">harmonizar_registos_em_fluxo</span><span class="p">(</span><span class="n">iterator_dbf</span><span class="p">,</span> <span class="n">schema_mestre</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Processa um iterador de registos DBF e garante que cada registo tenha todas as colunas do schema mestre.</p>
+<p>Este é um gerador que recebe registros-dicionários de um arquivo DBF,
+que podem ter colunas em falta. Para cada registo, ele cria um novo dicionário
+contendo todas as colunas definidas no <code>schema_mestre</code> do DBF, preenchendo as colunas
+em falta com uma string vazia e mantendo os valores existentes.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>iterator_dbf</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Um iterador que produz dicionários, onde cada dicionário
+representa um registo do arquivo DBF.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>schema_mestre</code>
+            </td>
+            <td>
+                  <code><span title="list">list</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Uma lista de strings contendo os nomes de todas as
+colunas que deveriam existir em cada registo (normalmente obtida de <code>DBF(...).field_names</code>).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>dict</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Um dicionário representando um registo harmonizado, garantindo que
+todas as chaves presentes em <code>schema_mestre</code> existem no registro-dicionário.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\conversor.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">harmonizar_registos_em_fluxo</span><span class="p">(</span><span class="n">iterator_dbf</span><span class="p">,</span> <span class="n">schema_mestre</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Processa um iterador de registos DBF e garante que cada registo tenha todas as colunas do schema mestre.</span>
+
+<span class="sd">    Este é um gerador que recebe registros-dicionários de um arquivo DBF,</span>
+<span class="sd">    que podem ter colunas em falta. Para cada registo, ele cria um novo dicionário</span>
+<span class="sd">    contendo todas as colunas definidas no `schema_mestre` do DBF, preenchendo as colunas</span>
+<span class="sd">    em falta com uma string vazia e mantendo os valores existentes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      iterator_dbf: Um iterador que produz dicionários, onde cada dicionário</span>
+<span class="sd">        representa um registo do arquivo DBF.</span>
+<span class="sd">      schema_mestre (list): Uma lista de strings contendo os nomes de todas as</span>
+<span class="sd">        colunas que deveriam existir em cada registo (normalmente obtida de `DBF(...).field_names`).</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">      dict: Um dicionário representando um registo harmonizado, garantindo que</span>
+<span class="sd">        todas as chaves presentes em `schema_mestre` existem no registro-dicionário.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="n">valor_vazio</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+  <span class="k">for</span> <span class="n">registo</span> <span class="ow">in</span> <span class="n">iterator_dbf</span><span class="p">:</span>
+    <span class="n">registo_completo</span> <span class="o">=</span> <span class="p">{</span><span class="n">coluna</span><span class="p">:</span> <span class="n">valor_vazio</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">schema_mestre</span><span class="p">}</span>
+    <span class="n">registo_completo</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">registo</span><span class="p">)</span>
+    <span class="k">yield</span> <span class="n">registo</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h2 id="extracao-ftp">Extração FTP</h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="quadrosdesaude.extracao.ftp.FTPDownloader" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">quadrosdesaude.extracao.ftp.FTPDownloader</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">FTPDownloader</span><span class="p">(</span><span class="n">ftp_host</span><span class="o">=</span><span class="s1">&#39;ftp.datasus.gov.br&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+
+        <p>Facilita o download de arquivos de servidores FTP, com foco no DATASUS.</p>
+<p>Esta classe encapsula a lógica para listar arquivos, baixar arquivos individuais
+e baixar múltiplos arquivos de um diretório FTP de forma concorrente,
+incluindo barras de progresso e tratamento básico de erros.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="quadrosdesaude.extracao.ftp.FTPDownloader.ftp_host">ftp_host</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O endereço do servidor FTP a ser utilizado.
+O padrão é "ftp.datasus.gov.br".</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+        <p>Inicializa o FTPDownloader.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>ftp_host</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O endereço do servidor FTP.
+Valor padrão é "ftp.datasus.gov.br".</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;ftp.datasus.gov.br&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+                  <details class="quote">
+                    <summary>Source code in <code>src\quadrosdesaude\extracao\ftp.py</code></summary>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ftp_host</span><span class="o">=</span><span class="s2">&quot;ftp.datasus.gov.br&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      Inicializa o FTPDownloader.</span>
+
+<span class="sd">      Args:</span>
+<span class="sd">        ftp_host (str, optional): O endereço do servidor FTP.</span>
+<span class="sd">          Valor padrão é &quot;ftp.datasus.gov.br&quot;.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">ftp_host</span> <span class="o">=</span> <span class="n">ftp_host</span>
+</code></pre></div></td></tr></table></div>
+                  </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="quadrosdesaude.extracao.ftp.FTPDownloader.lista_arquivos" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">lista_arquivos</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">lista_arquivos</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extensao</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;.dbc&#39;</span><span class="p">,</span> <span class="n">prefixo</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">usuario</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Lista arquivos num diretório específico do servidor FTP, com filtros opcionais.</p>
+<p>Conecta-se ao servidor FTP, navega até o <code>caminho_ftp</code> especificado e
+retorna uma lista de nomes de arquivos que correspondem aos critérios
+de <code>extensao</code> e <code>prefixo</code>.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_ftp</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho completo do diretório no servidor FTP a ser listado
+(ex: "/dissemin/publicos/SINAN/DADOS/FINAIS").</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>extensao</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A extensão dos arquivos a serem listados (case-insensitive).
+Se None, não filtra por extensão. Valor padrão é '.dbc'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;.dbc&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>prefixo</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O prefixo dos nomes dos arquivos a serem listados (case-insensitive).
+Se None, não filtra por prefixo. Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>usuario</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Nome de usuário para autenticação no FTP. Se None, usa login anônimo.
+Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>senha</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Senha para autenticação no FTP. Usado apenas se <code>usuario</code> for fornecido.
+Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Uma lista de strings contendo os nomes dos arquivos que correspondem</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>aos filtros no diretório especificado. Retorna uma lista vazia se</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>nenhum arquivo for encontrado ou em caso de erro de conexão/permissão.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ftplib.error_perm">error_perm</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se houver problemas de permissão ou o caminho não existir.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Para outros erros inesperados de conexão ou listagem.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\extracao\ftp.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="k">def</span><span class="w"> </span><span class="nf">lista_arquivos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extensao</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;.dbc&#39;</span><span class="p">,</span> <span class="n">prefixo</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">usuario</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      Lista arquivos num diretório específico do servidor FTP, com filtros opcionais.</span>
+
+<span class="sd">      Conecta-se ao servidor FTP, navega até o `caminho_ftp` especificado e</span>
+<span class="sd">      retorna uma lista de nomes de arquivos que correspondem aos critérios</span>
+<span class="sd">      de `extensao` e `prefixo`.</span>
+
+<span class="sd">      Args:</span>
+<span class="sd">        caminho_ftp: O caminho completo do diretório no servidor FTP a ser listado</span>
+<span class="sd">          (ex: &quot;/dissemin/publicos/SINAN/DADOS/FINAIS&quot;).</span>
+<span class="sd">        extensao: A extensão dos arquivos a serem listados (case-insensitive).</span>
+<span class="sd">          Se None, não filtra por extensão. Valor padrão é &#39;.dbc&#39;.</span>
+<span class="sd">        prefixo: O prefixo dos nomes dos arquivos a serem listados (case-insensitive).</span>
+<span class="sd">          Se None, não filtra por prefixo. Valor padrão é None.</span>
+<span class="sd">        usuario: Nome de usuário para autenticação no FTP. Se None, usa login anônimo.</span>
+<span class="sd">          Valor padrão é None.</span>
+<span class="sd">        senha: Senha para autenticação no FTP. Usado apenas se `usuario` for fornecido.</span>
+<span class="sd">          Valor padrão é None.</span>
+
+<span class="sd">      Returns:</span>
+<span class="sd">        Uma lista de strings contendo os nomes dos arquivos que correspondem</span>
+<span class="sd">        aos filtros no diretório especificado. Retorna uma lista vazia se</span>
+<span class="sd">        nenhum arquivo for encontrado ou em caso de erro de conexão/permissão.</span>
+
+<span class="sd">      Raises:</span>
+<span class="sd">        (Imprime erros no console, mas retorna lista vazia em caso de falha)</span>
+<span class="sd">        ftplib.error_perm: Se houver problemas de permissão ou o caminho não existir.</span>
+<span class="sd">        Exception: Para outros erros inesperados de conexão ou listagem.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+      <span class="k">with</span> <span class="n">FTP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ftp_host</span><span class="p">)</span> <span class="k">as</span> <span class="n">ftp</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">usuario</span><span class="p">:</span>
+          <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">usuario</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">senha</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+          <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+        <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">)</span>
+        <span class="n">arquivos_e_pastas</span> <span class="o">=</span> <span class="n">ftp</span><span class="o">.</span><span class="n">nlst</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefixo</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">extensao</span><span class="p">:</span>
+          <span class="k">return</span> <span class="n">arquivos_e_pastas</span>
+
+        <span class="k">if</span> <span class="n">extensao</span><span class="p">:</span>
+          <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">arquivos_e_pastas</span> <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">extensao</span><span class="o">.</span><span class="n">upper</span><span class="p">())]</span>
+        <span class="k">if</span> <span class="n">prefixo</span><span class="p">:</span>
+          <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">files</span> <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefixo</span><span class="o">.</span><span class="n">upper</span><span class="p">())]</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">files</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nenhum arquivo encontrado que corresponda aos filtros.&quot;</span><span class="p">)</span>
+          <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="k">return</span> <span class="n">files</span>
+
+    <span class="k">except</span> <span class="n">error_perm</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Erro ao acessar o caminho: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">. Verifique se o caminho está correto.&quot;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Ocorreu um erro inesperado: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="quadrosdesaude.extracao.ftp.FTPDownloader.download_arquivo" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">download_arquivo</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">download_arquivo</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_download&#39;</span><span class="p">,</span> <span class="n">usuario</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flag_pasta</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Baixa um único arquivo do servidor FTP para uma pasta local.</p>
+<p>Realiza o download de forma segura, primeiro para uma pasta temporária e
+depois movendo para o destino final. Inclui uma barra de progresso TQDM.
+Verifica se o arquivo já existe no destino final antes de iniciar o download.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_ftp</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho do diretório no servidor FTP onde o arquivo reside.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>nome_arquivo</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O nome exato do arquivo a ser baixado.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_destino</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A pasta local onde o arquivo será salvo permanentemente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A pasta local temporária usada durante o download.
+Valor padrão é './temp_download'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_download&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>usuario</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Nome de usuário para login no FTP. Valor padrão é None (anônimo).</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>senha</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Senha para login no FTP. Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>flag_pasta</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se True, omite a barra de progresso TQDM (útil para
+downloads em lote onde o TQDM principal controla o progresso).
+Valor padrão é False.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Uma mensagem indicando o status ("BAIXADO: nome_arquivo" ou
+"Arquivo já baixado: nome_arquivo").</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>None</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Retorna None se ocorrer um erro durante o download.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Erro ao mover o arquivo da pasta temporária para a final.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="ftplib.error_perm">error_perm</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Erro de permissão no FTP ou arquivo não encontrado.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="Exception">Exception</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Outros erros inesperados de conexão ou download.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\extracao\ftp.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_arquivo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_download&#39;</span><span class="p">,</span> <span class="n">usuario</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flag_pasta</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Baixa um único arquivo do servidor FTP para uma pasta local.</span>
+
+<span class="sd">    Realiza o download de forma segura, primeiro para uma pasta temporária e</span>
+<span class="sd">    depois movendo para o destino final. Inclui uma barra de progresso TQDM.</span>
+<span class="sd">    Verifica se o arquivo já existe no destino final antes de iniciar o download.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_ftp: O caminho do diretório no servidor FTP onde o arquivo reside.</span>
+<span class="sd">      nome_arquivo: O nome exato do arquivo a ser baixado.</span>
+<span class="sd">      pasta_destino: A pasta local onde o arquivo será salvo permanentemente.</span>
+<span class="sd">      pasta_temp: A pasta local temporária usada durante o download.</span>
+<span class="sd">        Valor padrão é &#39;./temp_download&#39;.</span>
+<span class="sd">      usuario: Nome de usuário para login no FTP. Valor padrão é None (anônimo).</span>
+<span class="sd">      senha: Senha para login no FTP. Valor padrão é None.</span>
+<span class="sd">      flag_pasta: Se True, omite a barra de progresso TQDM (útil para</span>
+<span class="sd">        downloads em lote onde o TQDM principal controla o progresso).</span>
+<span class="sd">        Valor padrão é False.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      str: Uma mensagem indicando o status (&quot;BAIXADO: nome_arquivo&quot; ou</span>
+<span class="sd">        &quot;Arquivo já baixado: nome_arquivo&quot;).</span>
+<span class="sd">      None: Retorna None se ocorrer um erro durante o download.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">      (Imprime erros no console, mas retorna None em caso de falha)</span>
+<span class="sd">      Exception: Erro ao mover o arquivo da pasta temporária para a final.</span>
+<span class="sd">      ftplib.error_perm: Erro de permissão no FTP ou arquivo não encontrado.</span>
+<span class="sd">      Exception: Outros erros inesperados de conexão ou download.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pasta_destino</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pasta_temp</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+  <span class="n">caminho_destino</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pasta_destino</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">)</span>
+  <span class="n">caminho_temp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pasta_temp</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_destino</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Arquivo já baixado: </span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">&quot;</span>
+
+  <span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">FTP</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ftp_host</span><span class="p">)</span> <span class="k">as</span> <span class="n">ftp</span><span class="p">:</span>
+      <span class="k">if</span> <span class="n">usuario</span><span class="p">:</span>
+        <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">usuario</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">senha</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">ftp</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+      <span class="n">ftp</span><span class="o">.</span><span class="n">cwd</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="ow">not</span> <span class="n">flag_pasta</span><span class="p">:</span>
+        <span class="n">total_size</span> <span class="o">=</span> <span class="n">ftp</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">nome_arquivo</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_local</span><span class="p">,</span> <span class="n">tqdm</span><span class="p">(</span>
+          <span class="n">total</span> <span class="o">=</span> <span class="n">total_size</span><span class="p">,</span>
+          <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">unit_scale</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">unit_divisor</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="n">nome_arquivo</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">pbar</span><span class="p">:</span>
+          <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="n">f_local</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+          <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RETR </span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+
+      <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_local</span><span class="p">:</span>
+          <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+            <span class="n">f_local</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+          <span class="n">ftp</span><span class="o">.</span><span class="n">retrbinary</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RETR </span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">,</span> <span class="n">caminho_destino</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+      <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ERRO ao mover o arquivo </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">)</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;BAIXADO: </span><span class="si">{</span><span class="n">nome_arquivo</span><span class="si">}</span><span class="s2">&quot;</span>
+
+  <span class="k">except</span> <span class="n">error_perm</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Erro de permissão ou arquivo não encontrado: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Ocorreu um erro inesperado durante o download: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">):</span>
+      <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">)</span>
+  <span class="k">finally</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">):</span>
+      <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">caminho_temp</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="quadrosdesaude.extracao.ftp.FTPDownloader.download_pasta" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">download_pasta</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">download_pasta</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_download&#39;</span><span class="p">,</span> <span class="n">extensao</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;.dbc&#39;</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_workers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Baixa múltiplos arquivos de um diretório FTP de forma concorrente.</p>
+<p>Primeiro, lista os arquivos no diretório remoto que correspondem aos filtros
+(usando <code>lista_arquivos</code>). Em seguida, utiliza um ThreadPoolExecutor para
+baixar os arquivos em paralelo (usando <code>download_arquivo</code> para cada um),
+mostrando uma barra de progresso geral.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_ftp</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho do diretório no servidor FTP a partir do qual baixar.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_destino</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A pasta local onde os arquivos serão salvos permanentemente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>pasta_temp</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A pasta local temporária usada durante os downloads.
+Valor padrão é './temp_download'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;./temp_download&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>extensao</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Filtro de extensão para os arquivos a baixar (case-insensitive).
+Valor padrão é '.dbc'.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;.dbc&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>prefixo</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Filtro de prefixo para os nomes dos arquivos (case-insensitive).
+Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_workers</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O número máximo de downloads simultâneos (threads).
+Valor padrão é 1.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>usuario</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Nome de usuário para login no FTP. Valor padrão é None (anônimo).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>senha</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Senha para login no FTP. Valor padrão é None.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None. A função executa o processo de download e imprime o progresso</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>e eventuais erros no console.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\extracao\ftp.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="k">def</span><span class="w"> </span><span class="nf">download_pasta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">caminho_ftp</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">pasta_temp</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;./temp_download&#39;</span><span class="p">,</span> <span class="n">extensao</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;.dbc&#39;</span><span class="p">,</span> <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_workers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">      Baixa múltiplos arquivos de um diretório FTP de forma concorrente.</span>
+
+<span class="sd">      Primeiro, lista os arquivos no diretório remoto que correspondem aos filtros</span>
+<span class="sd">      (usando `lista_arquivos`). Em seguida, utiliza um ThreadPoolExecutor para</span>
+<span class="sd">      baixar os arquivos em paralelo (usando `download_arquivo` para cada um),</span>
+<span class="sd">      mostrando uma barra de progresso geral.</span>
+
+<span class="sd">      Args:</span>
+<span class="sd">        caminho_ftp: O caminho do diretório no servidor FTP a partir do qual baixar.</span>
+<span class="sd">        pasta_destino: A pasta local onde os arquivos serão salvos permanentemente.</span>
+<span class="sd">        pasta_temp: A pasta local temporária usada durante os downloads.</span>
+<span class="sd">          Valor padrão é &#39;./temp_download&#39;.</span>
+<span class="sd">        extensao: Filtro de extensão para os arquivos a baixar (case-insensitive).</span>
+<span class="sd">          Valor padrão é &#39;.dbc&#39;.</span>
+<span class="sd">        prefixo: Filtro de prefixo para os nomes dos arquivos (case-insensitive).</span>
+<span class="sd">          Valor padrão é None.</span>
+<span class="sd">        max_workers: O número máximo de downloads simultâneos (threads).</span>
+<span class="sd">          Valor padrão é 1.</span>
+<span class="sd">        usuario: Nome de usuário para login no FTP. Valor padrão é None (anônimo).</span>
+<span class="sd">        senha: Senha para login no FTP. Valor padrão é None.</span>
+
+<span class="sd">      Returns:</span>
+<span class="sd">        None. A função executa o processo de download e imprime o progresso</span>
+<span class="sd">        e eventuais erros no console.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Iniciando o processo de download em lote ---&quot;</span><span class="p">)</span>
+
+    <span class="n">arquivos_para_download</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lista_arquivos</span><span class="p">(</span><span class="n">caminho_ftp</span><span class="p">,</span> <span class="n">extensao</span><span class="p">,</span> <span class="n">prefix</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">arquivos_para_download</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nenhum arquivo encontrado. Verifique o caminho ou as permissões.&quot;</span><span class="p">)</span>
+      <span class="k">return</span>
+
+    <span class="n">total_arquivos</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arquivos_para_download</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Encontrados </span><span class="si">{</span><span class="n">total_arquivos</span><span class="si">}</span><span class="s2"> arquivos. Começando downloads com </span><span class="si">{</span><span class="n">max_workers</span><span class="si">}</span><span class="s2"> conexões simultâneas.&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+      <span class="n">futuros</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="k">for</span> <span class="n">nome_arquivo</span> <span class="ow">in</span> <span class="n">arquivos_para_download</span><span class="p">:</span>
+        <span class="n">futuros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+          <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">download_arquivo</span><span class="p">,</span> <span class="n">caminho_ftp</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">,</span> <span class="n">pasta_temp</span><span class="p">,</span> <span class="n">flag_pasta</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="p">)</span>
+
+      <span class="k">with</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">total</span> <span class="o">=</span> <span class="n">total_arquivos</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Progresso Geral&quot;</span><span class="p">,</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">as</span> <span class="n">pbar</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+          <span class="k">for</span> <span class="n">future</span> <span class="ow">in</span> <span class="n">as_completed</span><span class="p">(</span><span class="n">futuros</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+            <span class="c1"># print(result)</span>
+            <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">🛑 INTERRUPÇÃO DETECTADA PELO USUÁRIO.&quot;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encerrando o executor e cancelando tarefas pendentes... Por favor, aguarde.&quot;</span><span class="p">)</span>
+          <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cancel_futures</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+          <span class="k">return</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">ERRO CRÍTICO: Interrompendo processamento...&quot;</span><span class="p">)</span>
+          <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Detalhes: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+          <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cancel_futures</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+          <span class="k">return</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Processo de download concluído! ---&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><p>options:
+    members: # Lista os métodos que quer documentar explicitamente
+      - <strong>init</strong>
+      - lista_arquivos
+      - download_arquivo
+      - download_pasta
+    show_root_toc_entry: false</p>
+<h2 id="utilitarios">Utilitários</h2>
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.utils.formatar_tamanho" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.utils.formatar_tamanho</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">formatar_tamanho</span><span class="p">(</span><span class="n">num_bytes</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Converte um número de bytes para uma string formatada legível por humanos.</p>
+<p>Utiliza potências de 1024 para converter bytes em Kilobytes (KB), Megabytes (MB),
+Gigabytes (GB) ou Terabytes (TB), arredondando o resultado para duas casas decimais.
+Se o valor de entrada for None, retorna "0 Bytes".</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>num_bytes</code>
+            </td>
+            <td>
+                  <code><span title="int">int</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O número de bytes a ser formatado. Pode ser None.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Uma string representando o tamanho formatado (ex: "1.23 MB", "500.00 KB", "2.00 GB").</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Retorna "0 Bytes" se a entrada for None.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">formatar_tamanho</span><span class="p">(</span><span class="n">num_bytes</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Converte um número de bytes para uma string formatada legível por humanos.</span>
+
+<span class="sd">	Utiliza potências de 1024 para converter bytes em Kilobytes (KB), Megabytes (MB),</span>
+<span class="sd">	Gigabytes (GB) ou Terabytes (TB), arredondando o resultado para duas casas decimais.</span>
+<span class="sd">	Se o valor de entrada for None, retorna &quot;0 Bytes&quot;.</span>
+
+<span class="sd">	Args:</span>
+<span class="sd">		num_bytes: O número de bytes a ser formatado. Pode ser None.</span>
+
+<span class="sd">	Returns:</span>
+<span class="sd">		Uma string representando o tamanho formatado (ex: &quot;1.23 MB&quot;, &quot;500.00 KB&quot;, &quot;2.00 GB&quot;).</span>
+<span class="sd">		Retorna &quot;0 Bytes&quot; se a entrada for None.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="k">if</span> <span class="n">num_bytes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;0 Bytes&quot;</span>
+
+  <span class="n">power</span> <span class="o">=</span> <span class="mi">1024</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">power_labels</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">}</span>
+
+  <span class="k">while</span> <span class="n">num_bytes</span> <span class="o">&gt;=</span> <span class="n">power</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">power_labels</span><span class="p">):</span>
+    <span class="n">num_bytes</span> <span class="o">/=</span> <span class="n">power</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+  <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num_bytes</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">power_labels</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="si">}</span><span class="s2">B&quot;</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.utils.medir_tamanho_pasta" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.utils.medir_tamanho_pasta</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">medir_tamanho_pasta</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Calcula e retorna o tamanho total de todos os ficheiros dentro de uma pasta e suas subpastas.</p>
+<p>Percorre recursivamente a árvore de diretórios a partir do <code>caminho_pasta</code>,
+soma o tamanho de todos os ficheiros encontrados e retorna o tamanho total
+formatado como uma string legível (usando <code>formatar_tamanho</code>).
+Imprime mensagens informativas durante o processo e em caso de erros de acesso.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_pasta</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho para o diretório cujo tamanho deve ser medido.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Uma string com o tamanho total formatado (ex: "1.50 GB").</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>None</code></td>            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Se a pasta não existir ou ocorrer um erro fundamental na leitura.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">medir_tamanho_pasta</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula e retorna o tamanho total de todos os ficheiros dentro de uma pasta e suas subpastas.</span>
+
+<span class="sd">    Percorre recursivamente a árvore de diretórios a partir do `caminho_pasta`,</span>
+<span class="sd">    soma o tamanho de todos os ficheiros encontrados e retorna o tamanho total</span>
+<span class="sd">    formatado como uma string legível (usando `formatar_tamanho`).</span>
+<span class="sd">    Imprime mensagens informativas durante o processo e em caso de erros de acesso.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_pasta: O caminho para o diretório cujo tamanho deve ser medido.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      str: Uma string com o tamanho total formatado (ex: &quot;1.50 GB&quot;).</span>
+<span class="sd">      None: Se a pasta não existir ou ocorrer um erro fundamental na leitura.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔎 Calculando o tamanho da pasta: </span><span class="si">{</span><span class="n">caminho_pasta</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+  <span class="n">tamanho_total_bytes</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+      <span class="n">caminho_arquivo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+      <span class="k">try</span><span class="p">:</span>
+        <span class="n">tamanho_total_bytes</span> <span class="o">+=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">caminho_arquivo</span><span class="p">)</span>
+      <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Não foi possível acessar o arquivo: </span><span class="si">{</span><span class="n">caminho_arquivo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">pass</span>
+  <span class="n">tamanho_formatado</span> <span class="o">=</span> <span class="n">formatar_tamanho</span><span class="p">(</span><span class="n">tamanho_total_bytes</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tamanho da pasta é </span><span class="si">{</span><span class="n">tamanho_formatado</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">tamanho_formatado</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="quadrosdesaude.utils.limpador_" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">quadrosdesaude.utils.limpador_</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">limpador_</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents first">
+
+        <p>Apaga <strong>PERMANENTEMENTE</strong> todo o conteúdo (arquivos e subpastas) de um diretório específico.</p>
+<p>⚠️ ATENÇÃO: Esta é uma operação DESTRUTIVA e IRREVERSÍVEL. ⚠️</p>
+<p>Solicita confirmação explícita do usuário antes de proceder.
+Itera sobre todos os itens no primeiro nível do <code>caminho_pasta</code> e apaga-os.
+Ficheiros são removidos com <code>os.remove()</code> e diretórios (e todo o seu conteúdo)
+são removidos recursivamente com <code>shutil.rmtree()</code>.
+Imprime o progresso e quaisquer erros que ocorram durante a exclusão.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>caminho_pasta</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O caminho completo para o diretório que será esvaziado.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None. A função realiza a operação de limpeza diretamente no sistema de ficheiros.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\utils.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">limpador_</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apaga **PERMANENTEMENTE** todo o conteúdo (arquivos e subpastas) de um diretório específico.</span>
+
+<span class="sd">    ⚠️ ATENÇÃO: Esta é uma operação DESTRUTIVA e IRREVERSÍVEL. ⚠️</span>
+
+<span class="sd">    Solicita confirmação explícita do usuário antes de proceder.</span>
+<span class="sd">    Itera sobre todos os itens no primeiro nível do `caminho_pasta` e apaga-os.</span>
+<span class="sd">    Ficheiros são removidos com `os.remove()` e diretórios (e todo o seu conteúdo)</span>
+<span class="sd">    são removidos recursivamente com `shutil.rmtree()`.</span>
+<span class="sd">    Imprime o progresso e quaisquer erros que ocorram durante a exclusão.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      caminho_pasta: O caminho completo para o diretório que será esvaziado.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      None. A função realiza a operação de limpeza diretamente no sistema de ficheiros.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+  <span class="n">confirmacao</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Digite &#39;sim&#39; para confirmar e continuar a exclusão de tudo que está na pasta </span><span class="si">{</span><span class="n">caminho_pasta</span><span class="si">}</span><span class="s2">: &quot;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">confirmacao</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;sim&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">):</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Iniciando a limpeza da pasta &#39;</span><span class="si">{</span><span class="n">caminho_pasta</span><span class="si">}</span><span class="s2">&#39;...&quot;</span><span class="p">)</span>
+      <span class="n">itens_para_apagar</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">caminho_pasta</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">))</span>
+      <span class="k">if</span> <span class="ow">not</span> <span class="n">itens_para_apagar</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A pasta já está vazia. Nenhuma ação necessária.&quot;</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item_path</span> <span class="ow">in</span> <span class="n">itens_para_apagar</span><span class="p">:</span>
+          <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">item_path</span><span class="p">):</span>
+              <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">item_path</span><span class="p">)</span>
+              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Arquivo apagado: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">item_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">item_path</span><span class="p">):</span>
+              <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">item_path</span><span class="p">)</span>
+              <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - Pasta apagada: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">item_path</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+          <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  - ERRO ao apagar </span><span class="si">{</span><span class="n">item_path</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Limpeza concluída com sucesso!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ERRO: A pasta &#39;</span><span class="si">{</span><span class="n">caminho_pasta</span><span class="si">}</span><span class="s2">&#39; não foi encontrada. Verifique o caminho.&quot;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Operação cancelada pelo usuário.&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div><h2 id="parsers-internos">Parsers Internos</h2>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="quadrosdesaude.conversao.parser.StringFieldParser" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">quadrosdesaude.conversao.parser.StringFieldParser</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="dbfread.FieldParser">FieldParser</span></code></p>
+
+
+        <p>Parser personalizado para dbfread que tenta decodificar todos os campos como strings latin1.</p>
+<p>Esta classe sobrescreve o método <code>parse</code> padrão. Para cada campo lido do
+ficheiro DBF, ela tenta remover espaços extras e decodificar os bytes
+usando a codificação 'latin1'. Se a decodificação falhar (por exemplo,
+porque o dado não é bytes ou contém caracteres inválidos), o dado original
+é retornado sem modificação.</p>
+<p>Isto é útil para ler ficheiros DBF com dados potencialmente "sujos" ou
+tipos inconsistentes, garantindo que a leitura prossiga e que os dados
+sejam tratados como texto sempre que possível.</p>
+
+
+<details class="uso" open>
+  <summary>Uso</summary>
+  <p>tabela = DBF('meu_arquivo.dbf', parserclass=StringFieldParser)</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="quadrosdesaude.conversao.parser.StringFieldParser.parse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">parse</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">parse</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Tenta decodificar o dado como uma string latin1 após remover espaços.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>field</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O objeto Field do dbfread (não usado diretamente aqui).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>data</code>
+            </td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>O valor bruto do campo lido do ficheiro DBF.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>str or object: A string decodificada (se bem-sucedido) ou o dado original.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>src\quadrosdesaude\conversao\parser.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Tenta decodificar o dado como uma string latin1 após remover espaços.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      field: O objeto Field do dbfread (não usado diretamente aqui).</span>
+<span class="sd">      data: O valor bruto do campo lido do ficheiro DBF.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      str or object: A string decodificada (se bem-sucedido) ou o dado original.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Tenta decodificar os bytes para uma string latin1</span>
+    <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+  <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">AttributeError</span><span class="p">):</span>
+    <span class="c1"># Se falhar ou se o dado já não for bytes, retorna como está</span>
+    <span class="k">return</span> <span class="n">data</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="funcao-de-descompressao-c-descomprimir_dbc">Função de Descompressão C (<code>descomprimir_dbc</code>)</h2>
+<p>Esta função, implementada em C para máxima performance, descomprime um ficheiro <code>.dbc</code> do DATASUS para o formato <code>.dbf</code>.</p>
+<p><strong>Assinatura (como exposta em Python):</strong></p>
+<pre><code class="language-python">quadrosdesaude.descomprimir_dbc(caminho_dbc: str, caminho_dbf: str) -&gt; int
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
