@@ -1,0 +1,37 @@
+site_name: Quadros de Saúde
+repo_url: https://github.com/drandreq/quadrosdesaude
+repo_name: drandre/quadrosdesaude
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: pt-br
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+nav:
+  - Início: index.md
+  - Referência da API: api.md
+
+watch:
+  - src/quadrosdesaude
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            # docstring_style: google
+            show_root_heading: true
+            show_signature_annotations: true
+            separate_signature: true
+            merge_init_into_class: true
+            members_order: source
+          paths: [quadrosdesaude]

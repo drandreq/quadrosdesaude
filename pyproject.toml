@@ -1,0 +1,55 @@
+[project]
+name = "quadrosdesaude"
+version = "0.1.6"
+description = "Ferramentas para processar dados do Datasus (Sistema Público de Saúde)."
+authors = [
+    {name = "André Quadros", email = "andre@quadrosdesaude.com.br"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://quadrosdesaude.com.br"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+dbfread = ">=2.0.7,<3.0.0"
+polars = ">=1.34.0,<2.0.0"
+pyarrow = ">=21.0.0,<22.0.0"
+tqdm = ">=4.67.1,<5.0.0"
+psutil = ">=7.1.1,<8.0.0"
+setuptools = "^80.9.0"
+
+
+[tool.poetry]
+packages = [{include = "quadrosdesaude", from = "src"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+]
+doc = [
+    "mkdocs-material (>=9.6.22,<10.0.0)",
+    "mkdocstrings (>=0.30.1,<0.31.0)",
+    "mkdocstrings-python (>=1.18.2,<2.0.0)"
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
