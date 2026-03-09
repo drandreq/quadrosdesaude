@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 from typing import Literal, Tuple, Union
 from .conversor import dbc2dbf, dbf2parquet
+from quadrosdesaude.logger import logger
 
 def dbc2parquet(
   caminho_dbc: str, 
@@ -112,8 +113,7 @@ def orquestrador(
     Orquestra o processamento completo de uma pasta de arquivos .DBC.
 
     Esta função gerencia o pipeline DBC -> DBF Temporário -> Parquet Final -> Mover ao destino,
-    utilizando multithreading para processar cada ficheiro de forma 
-    atomica e paralela. TODO: Incluir verificação de arquivos existentes
+    utilizando multithreading para executar cada ficheiro de forma atômica e paralela.
 
     Args:
         pasta_origem_dbc: Caminho para a pasta contendo os arquivos .dbc (origem).
@@ -141,7 +141,7 @@ def orquestrador(
   
   arquivos_dbc = list( Path( pasta_origem_dbc ).glob( '*.[dD][bB][cC]' ) )
   if not arquivos_dbc:
-    print("Nenhum ficheiro .dbc encontrado na pasta de origem.")
+    logger.warning("Nenhum ficheiro .dbc encontrado na pasta de origem.")
     return
 
   sucessos, falhas = 0, 0
@@ -161,23 +161,23 @@ def orquestrador(
         if sucesso:
           sucessos += 1
         else:
-          print(f"'{nome_base}': {mensagem}")
+          logger.error(f"'{nome_base}': {mensagem}")
           falhas += 1
         progress_bar.update(1)
       progress_bar.close()
     except KeyboardInterrupt:
-      print(f"\n\n🛑 INTERRUPÇÃO DETECTADA PELO USUÁRIO.")
-      print("Encerrando o executor e cancelando tarefas pendentes... Por favor, aguarde.")
+      logger.warning(f"\n\n🛑 INTERRUPÇÃO DETECTADA PELO USUÁRIO.")
+      logger.warning("Encerrando o executor e cancelando tarefas pendentes... Por favor, aguarde.")
       executor.shutdown(wait = False, cancel_futures = True)
       return
 
     except Exception as e:
-      print(f"\n\nERRO CRÍTICO: Interrompendo processamento...")
-      print(f"Detalhes: {e}")
+      logger.error(f"\n\nERRO CRÍTICO: Interrompendo processamento...")
+      logger.error(f"Detalhes: {e}")
       executor.shutdown(wait = False, cancel_futures = True)
       return
 
   duration_total = time.perf_counter() - start_time_total
-  print(f"Processamento concluído em {duration_total:.2f} segundos.")
-  print(f"Sucessos: {sucessos}")
-  print(f"Falhas: {falhas}")
+  logger.info(f"Processamento concluído em {duration_total:.2f} segundos.")
+  logger.info(f"Sucessos: {sucessos}")
+  logger.info(f"Falhas: {falhas}")

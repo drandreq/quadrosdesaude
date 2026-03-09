@@ -1,0 +1,30 @@
+# Usamos uma imagem oficial do Python baseado no Debian
+FROM python:3.10-slim
+
+# Definir diretório de trabalho
+WORKDIR /app
+
+# Instalar dependências do sistema necessárias para compilar e construir bibliotecas C
+# - build-essential contém gcc, g++, make
+# - python3-dev contém os headers essenciais do python
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    python3-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar os arquivos do projeto para o container (incluindo setup.py, pyproject.toml e a pasta src)
+COPY . /app
+
+# Instalar Poetry
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir poetry
+
+# Não criar ambiente virtual dentro do container
+RUN poetry config virtualenvs.create false
+
+# Instalar o projeto e suas dependências completas
+RUN poetry install --with dev
+
+# O comando padrão iniciará pytest automaticamente rodando nossa suíte toda no ambiente Linux
+CMD ["pytest", "tests/", "-v"]

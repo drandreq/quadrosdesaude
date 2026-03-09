@@ -3,6 +3,8 @@
 Quadros de Saúde: Ferramentas para processamento de dados de saúde pública do Brasil.
 """
 
+__version__ = "0.2.5"
+
 try:
   from . import datasus
   from .datasus import decompress as descomprimir_dbc
@@ -15,6 +17,8 @@ except ImportError as e:
 from .conversao.orquestrador import orquestrador, dbc2parquet
 from .conversao.conversor import dbc2dbf, dbf2parquet
 from .extracao.ftp import FTPDownloader
+from .extracao.inventario import InventarioFTP
+from .logger import logger
 from .utils import medir_tamanho_pasta, limpador_
 import os
 
@@ -68,7 +72,9 @@ __all__ = [
   'ftp_download_arquivo',
   'ftp_download_pasta',
   'medir_tamanho_pasta',
-  'limpador_'
+  'limpador_',
+  'InventarioFTP',
+  'logger'
 ]
 
 if _c_extension_available:

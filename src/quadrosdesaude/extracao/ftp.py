@@ -3,6 +3,8 @@ import shutil
 from ftplib import FTP, error_perm
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
+from quadrosdesaude.logger import logger
 
 class FTPDownloader:
   """
@@ -25,14 +27,14 @@ class FTPDownloader:
           Valor padrão é "ftp.datasus.gov.br".
 		"""
     self.ftp_host = ftp_host
+    self.evento_parada = threading.Event()
 
   def lista_arquivos(self, caminho_ftp: str, extensao: str = '.dbc', prefixo: str = None, usuario: str = None, senha: str = None):
     """
-      Lista arquivos num diretório específico do servidor FTP, com filtros opcionais.
+      Lista arquivos num diretório específico do servidor FTP.
 
-      Conecta-se ao servidor FTP, navega até o `caminho_ftp` especificado e
-      retorna uma lista de nomes de arquivos que correspondem aos critérios
-      de `extensao` e `prefixo`.
+      Conecta-se ao servidor FTP, mapeia o `caminho_ftp` especificado e
+      retorna os arquivos de acordo com filtros opcionais de extensão e prefixo.
 
       Args:
         caminho_ftp: O caminho completo do diretório no servidor FTP a ser listado
@@ -76,25 +78,25 @@ class FTPDownloader:
           files = [item for item in files if item.upper().startswith(prefixo.upper())]
         
         if not files:
-          print("Nenhum arquivo encontrado que corresponda aos filtros.")
+          logger.info("Nenhum arquivo encontrado que corresponda aos filtros.")
           return []
         
         return files
       
     except error_perm as e:
-      print(f"❌ Erro ao acessar o caminho: {e}. Verifique se o caminho está correto.")
+      logger.error(f"❌ Erro ao acessar o caminho: {e}. Verifique se o caminho está correto.")
       return []
     except Exception as e:
-      print(f"❌ Ocorreu um erro inesperado: {e}")
+      logger.error(f"❌ Ocorreu um erro inesperado: {e}")
       return []
 
   def download_arquivo(self, caminho_ftp: str, nome_arquivo: str, pasta_destino: str, pasta_temp: str = './temp_download', usuario: str = None, senha: str = None, flag_pasta: bool = False):
     """
-      Baixa um único arquivo do servidor FTP para uma pasta local.
+    Baixa um único arquivo do servidor remoto para um destino local usando buffer temporário.
 
-      Realiza o download de forma segura, primeiro para uma pasta temporária e
-      depois movendo para o destino final. Inclui uma barra de progresso TQDM.
-      Verifica se o arquivo já existe no destino final antes de iniciar o download.
+    Gere o download através de uma pasta temporária para evitar corrupção, e move 
+    ao destino final após sucesso (inclui barra de progresso TQDM). Ignora se o arquivo
+    já existir salvo no disco.
 
       Args:
         caminho_ftp: O caminho do diretório no servidor FTP onde o arquivo reside.
@@ -143,6 +145,8 @@ class FTPDownloader:
             unit = 'B', unit_scale = True, unit_divisor = 1024, desc = nome_arquivo
           ) as pbar:
             def callback(data):
+              if self.evento_parada.is_set():
+                  raise Exception("Download cancelado pelo usuário.")
               f_local.write(data)
               pbar.update(len(data))
             ftp.retrbinary(f"RETR {nome_arquivo}", callback)
@@ -150,6 +154,8 @@ class FTPDownloader:
         else:
           with open(caminho_temp, 'wb') as f_local:
             def callback(data):
+              if self.evento_parada.is_set():
+                  raise Exception("Download cancelado pelo usuário.")
               f_local.write(data)
             ftp.retrbinary(f"RETR {nome_arquivo}", callback)
       try:
@@ -159,9 +165,9 @@ class FTPDownloader:
       return f"BAIXADO: {nome_arquivo}"
 
     except error_perm as e:
-      print(f"❌ Erro de permissão ou arquivo não encontrado: {e}")
+      logger.error(f"❌ Erro de permissão ou arquivo não encontrado: {e}")
     except Exception as e:
-      print(f"❌ Ocorreu um erro inesperado durante o download: {e}")
+      logger.error(f"❌ Ocorreu um erro inesperado durante o download: {e}")
       if os.path.exists(caminho_temp):
         os.remove(caminho_temp)
     finally:
@@ -171,12 +177,10 @@ class FTPDownloader:
 
   def download_pasta(self, caminho_ftp: str, pasta_destino: str, pasta_temp: str = './temp_download', extensao: str = '.dbc', prefix: str = None, max_workers: int = 1):
     """
-      Baixa múltiplos arquivos de um diretório FTP de forma concorrente.
+    Baixa múltiplos arquivos de um diretório remoto em lotes de forma concorrente.
 
-      Primeiro, lista os arquivos no diretório remoto que correspondem aos filtros
-      (usando `lista_arquivos`). Em seguida, utiliza um ThreadPoolExecutor para
-      baixar os arquivos em paralelo (usando `download_arquivo` para cada um),
-      mostrando uma barra de progresso geral.
+    Lista todos os conteúdos viáveis e faz o mapeamento `ThreadPoolExecutor` para o 
+    download em paralelo com a exibição do progresso TQDM.
 
       Args:
         caminho_ftp: O caminho do diretório no servidor FTP a partir do qual baixar.
@@ -196,40 +200,47 @@ class FTPDownloader:
         None. A função executa o processo de download e imprime o progresso
         e eventuais erros no console.
 		"""
-    print("--- Iniciando o processo de download em lote ---")
+    logger.info("--- Iniciando o processo de download em lote ---")
 
     arquivos_para_download = self.lista_arquivos(caminho_ftp, extensao, prefix)
 
     if not arquivos_para_download:
-      print("Nenhum arquivo encontrado. Verifique o caminho ou as permissões.")
+      logger.warning("Nenhum arquivo encontrado. Verifique o caminho ou as permissões.")
       return
 
     total_arquivos = len(arquivos_para_download)
-    print(f"Encontrados {total_arquivos} arquivos. Começando downloads com {max_workers} conexões simultâneas.")
+    logger.info(f"Encontrados {total_arquivos} arquivos. Começando downloads com {max_workers} conexões simultâneas.")
+    self.evento_parada.clear()
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-      futuros = []
-      for nome_arquivo in arquivos_para_download:
-        futuros.append(
-          executor.submit(self.download_arquivo, caminho_ftp, nome_arquivo, pasta_destino, pasta_temp, flag_pasta = True)
-        )
+    try:
+      with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futuros = []
+        for nome_arquivo in arquivos_para_download:
+          futuros.append(
+            executor.submit(self.download_arquivo, caminho_ftp, nome_arquivo, pasta_destino, pasta_temp, usuario, senha, True)
+          )
 
-      with tqdm(total = total_arquivos, desc = "Progresso Geral", position = 0) as pbar:
-        try:
-          for future in as_completed(futuros):
-            result = future.result()
-            # print(result)
-            pbar.update(1)
-        except KeyboardInterrupt:
-          print(f"\n\n🛑 INTERRUPÇÃO DETECTADA PELO USUÁRIO.")
-          print("Encerrando o executor e cancelando tarefas pendentes... Por favor, aguarde.")
-          executor.shutdown(wait=False, cancel_futures=True)
-          return
-        except Exception as e:
-          print(f"\n\nERRO CRÍTICO: Interrompendo processamento...")
-          print(f"Detalhes: {e}")
-          executor.shutdown(wait=False, cancel_futures=True)
-          return
-    print("\n--- Processo de download concluído! ---")
-    # if os.path.exists(pasta_temp):
-    #   shutil.rmtree(pasta_temp)
+        with tqdm(total = total_arquivos, desc = "Progresso Geral", position = 0) as pbar:
+            for future in as_completed(futuros):
+              # Check event
+              if self.evento_parada.is_set():
+                 logger.warning("Cancelamento solicitado. Interrompendo fila de downloads.")
+                 executor.shutdown(wait=False, cancel_futures=True)
+                 break
+              try:
+                result = future.result()
+                pbar.update(1)
+              except Exception as e:
+                logger.error(f"Erro no download individual: {e}")
+
+    except KeyboardInterrupt:
+        logger.warning(f"\n\n🛑 INTERRUPÇÃO DETECTADA PELO TÉRMINO NA CLI.")
+        self.evento_parada.set()
+    except BaseException as e: # Catch all exceptions like Streamlit StopException
+        logger.error(f"Forçando o desligamento das threads devido a interrupção da plataforma.")
+        self.evento_parada.set()
+        raise e
+    finally:
+       self.evento_parada.set()
+    
+    logger.info("\n--- Processo de download concluído ou finalizado! ---")

@@ -11,6 +11,7 @@ theme:
 
 nav:
   - Início: index.md
+  - Arquitetura e Contribuição: arquitetura.md
   - Referência da API: api.md
 
 watch:

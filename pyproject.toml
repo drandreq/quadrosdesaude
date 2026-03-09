@@ -1,12 +1,12 @@
 [project]
 name = "quadrosdesaude"
-version = "0.1.6"
+version = "0.2.5"
 description = "Ferramentas para processar dados do Datasus (Sistema Público de Saúde)."
 authors = [
     {name = "André Quadros", email = "andre@quadrosdesaude.com.br"}
 ]
 license = "MIT"
-readme = "README.md"
+readme = "README.MD"
 requires-python = ">=3.10"
 
 [project.urls]
@@ -21,10 +21,16 @@ pyarrow = ">=21.0.0,<22.0.0"
 tqdm = ">=4.67.1,<5.0.0"
 psutil = ">=7.1.1,<8.0.0"
 setuptools = "^80.9.0"
+duckdb = ">=1.0.0"
+streamlit = ">=1.30.0"
 
 
 [tool.poetry]
 packages = [{include = "quadrosdesaude", from = "src"}]
+include = [
+    { format = "wheel", path = "src/quadrosdesaude/*.so" },
+    { format = "wheel", path = "src/quadrosdesaude/*.pyd" }
+]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
@@ -36,8 +42,11 @@ classifiers = [
 
 
 [build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core", "setuptools"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.build]
+script = "build.py"
 
 [dependency-groups]
 dev = [

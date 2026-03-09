@@ -36,17 +36,22 @@ pip install quadrosdesaude
 
 
 ## Colaborando
-Para contribuir com este projeto você precisará fazer um fork do repositório, clone local, instalar os arquivos e configurar algumas coisinhas do poetry.
-```bash
-poetry install
-```
-```bash
-poetry self add poetry-plugin-shell
-```
-Para ser capaz de executar o 
+Para contribuir com este projeto você precisará fazer um fork do repositório, clone local e instalar via Poetry para ambiente de desenvolvimento isolado:
 
+```bash
+# Instala o projeto com as dependências de desenvolvimento
+poetry install --with dev
+```
+
+Para garantir a construção correta dos Módulos C nativos durante o testes:
+```bash
+poetry build
+```
+
+E finalmente, para habilitar o ambiente onde você poderá executar a UI local do Streamlit:
 ```bash 
 poetry shell
+python iniciar_ui.py
 ```
 
 

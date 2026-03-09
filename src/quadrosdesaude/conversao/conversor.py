@@ -9,14 +9,15 @@ import pyarrow.parquet as pq
 from dbfread import DBF
 from quadrosdesaude import descomprimir_dbc
 from .parser import StringFieldParser
+from quadrosdesaude.logger import logger
 
 def harmonizar_registos_em_fluxo(iterator_dbf, schema_mestre):
   """
-    Processa um iterador de registos DBF e garante que cada registo tenha todas as colunas do schema mestre.
+    Processa um iterador de registos DBF garantindo que cada registo tenha todas as colunas.
 
-    Este é um gerador que recebe registros-dicionários de um arquivo DBF,
-    que podem ter colunas em falta. Para cada registo, ele cria um novo dicionário
-    contendo todas as colunas definidas no `schema_mestre` do DBF, preenchendo as colunas
+    Este é um gerador que recebe registros-dicionários de um arquivo DBF, que podem ter 
+    colunas em falta devido a peculiaridades dos dados do DATASUS. Para cada registo, ele cria um 
+    novo dicionário contendo todas as colunas definidas no `schema_mestre`, preenchendo as colunas 
     em falta com uma string vazia e mantendo os valores existentes.
 
     Args:
@@ -33,15 +34,16 @@ def harmonizar_registos_em_fluxo(iterator_dbf, schema_mestre):
   for registo in iterator_dbf:
     registo_completo = {coluna: valor_vazio for coluna in schema_mestre}
     registo_completo.update(registo)
-    yield registo
+    yield registo_completo
 
 def dbc2dbf(caminho_dbc: str, caminho_dbf: str) -> bool:
   """
-    Descomprime um único arquivo .dbc do DATASUS (PKWare) para o formato .dbf (dbase).
+    Descomprime um único arquivo .dbc do PKWare (DATASUS) para o formato padrão .dbf.
 
-    Utiliza a função `descomprimir_dbc` (proveniente da extensão em C @danicat) para realizar
-    a descompressão. Regista o tempo de execução e retorna um booleano
-    indicando o sucesso da operação.
+    Utiliza a função `descomprimir_dbc` para realizar a extração binária. Registra o tempo 
+    de execução e retorna um booleano de sucesso.
+    
+    Atenção: A biblioteca de extração foi fornecida e otimizada por `@danicat` na extensão C original.
 
     Args:
       caminho_dbc: Caminho completo para o arquivo .dbc de entrada.
@@ -69,11 +71,9 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
     Converte um arquivo .dbf para o formato Parquet de forma eficiente em memória.
 
     Lê o arquivo .dbf em lotes (chunks), harmoniza os registos para garantir
-    um schema consistente (usando `harmonizar_registos_em_fluxo`), converte
-    cada lote para um DataFrame Polars (forçando todas as colunas para String/Utf8),
-    e escreve/anexa os lotes a um arquivo Parquet final usando PyArrow.
-    No final, verifica se o número de linhas no Parquet gerado corresponde
-    ao número de linhas reportado no cabeçalho do DBF.
+    um schema consistente e protegido contra colunas faltantes, converte cada lote 
+    para um DataFrame Polars e escreve/anexa a um arquivo Parquet final usando PyArrow.
+    Por segurança, valida se as linhas escritas correspondem ao cabeçalho original.
 
     Args:
       caminho_dbf: Caminho completo para o arquivo .dbf de entrada.
@@ -129,10 +129,10 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
     if total_linhas_cabecalho == linhas_no_parquet:
       return True
     else:
-      print(f'Falha no dbf2parquet do arquivo {caminho_dbf}')
+      logger.error(f'Falha no dbf2parquet do arquivo {caminho_dbf}')
       return False
   except Exception as e:
-    print(f'Falha crítica ao processar dbf2parquet do arquivo {caminho_dbf}')
+    logger.error(f'Falha crítica ao processar dbf2parquet do arquivo {caminho_dbf}')
     del lote_de_registros, df_lote, tabela_arrow
     gc.collect()
     if writer:

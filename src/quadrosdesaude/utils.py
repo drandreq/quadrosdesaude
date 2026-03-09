@@ -2,6 +2,7 @@ import os
 import glob
 import shutil
 from typing import Optional
+from quadrosdesaude.logger import logger
 
 def formatar_tamanho(num_bytes: int) -> str:
   """
@@ -47,7 +48,7 @@ def medir_tamanho_pasta(caminho_pasta: str) -> Optional[str]:
       str: Uma string com o tamanho total formatado (ex: "1.50 GB").
       None: Se a pasta não existir ou ocorrer um erro fundamental na leitura.
 	"""
-  print(f"🔎 Calculando o tamanho da pasta: {caminho_pasta}...")
+  logger.info(f"🔎 Calculando o tamanho da pasta: {caminho_pasta}...")
   tamanho_total_bytes = 0
   for dirpath, dirnames, filenames in os.walk(caminho_pasta):
     for f in filenames:
@@ -55,24 +56,21 @@ def medir_tamanho_pasta(caminho_pasta: str) -> Optional[str]:
       try:
         tamanho_total_bytes += os.path.getsize(caminho_arquivo)
       except OSError:
-        print(f"Não foi possível acessar o arquivo: {caminho_arquivo}")
+        logger.warning(f"Não foi possível acessar o arquivo: {caminho_arquivo}")
         pass
   tamanho_formatado = formatar_tamanho(tamanho_total_bytes)
-  print(f'Tamanho da pasta é {tamanho_formatado}')
+  logger.info(f'Tamanho da pasta é {tamanho_formatado}')
   return tamanho_formatado
 
 
 def limpador_(caminho_pasta: str) -> None:
   """
-    Apaga **PERMANENTEMENTE** todo o conteúdo (arquivos e subpastas) de um diretório específico.
-
-    ⚠️ ATENÇÃO: Esta é uma operação DESTRUTIVA e IRREVERSÍVEL. ⚠️
-
-    Solicita confirmação explícita do usuário antes de proceder.
-    Itera sobre todos os itens no primeiro nível do `caminho_pasta` e apaga-os.
-    Ficheiros são removidos com `os.remove()` e diretórios (e todo o seu conteúdo)
-    são removidos recursivamente com `shutil.rmtree()`.
-    Imprime o progresso e quaisquer erros que ocorram durante a exclusão.
+    Apaga permanentemente todo o conteúdo de um diretório específico.
+    
+    Warning:
+        Esta é uma operação destrutiva irreversível.
+        A função iterará sobre arquivos e subdiretórios no primeiro nível
+        do caminho especificado e solicitará confirmação explícita antes de apagar a árvore.
 
     Args:
       caminho_pasta: O caminho completo para o diretório que será esvaziado.
@@ -83,23 +81,23 @@ def limpador_(caminho_pasta: str) -> None:
   confirmacao = input(f"Digite 'sim' para confirmar e continuar a exclusão de tudo que está na pasta {caminho_pasta}: ")
   if confirmacao.lower() == 'sim':
     if os.path.exists(caminho_pasta):
-      print(f"\nIniciando a limpeza da pasta '{caminho_pasta}'...")
+      logger.info(f"\nIniciando a limpeza da pasta '{caminho_pasta}'...")
       itens_para_apagar = glob.glob(os.path.join(caminho_pasta, '*'))
       if not itens_para_apagar:
-        print("A pasta já está vazia. Nenhuma ação necessária.")
+        logger.info("A pasta já está vazia. Nenhuma ação necessária.")
       else:
         for item_path in itens_para_apagar:
           try:
             if os.path.isfile(item_path):
               os.remove(item_path)
-              print(f"  - Arquivo apagado: {os.path.basename(item_path)}")
+              logger.info(f"  - Arquivo apagado: {os.path.basename(item_path)}")
             elif os.path.isdir(item_path):
               shutil.rmtree(item_path)
-              print(f"  - Pasta apagada: {os.path.basename(item_path)}")
+              logger.info(f"  - Pasta apagada: {os.path.basename(item_path)}")
           except Exception as e:
-            print(f"  - ERRO ao apagar {item_path}: {e}")
-        print("\n✅ Limpeza concluída com sucesso!")
+            logger.error(f"  - ERRO ao apagar {item_path}: {e}")
+        logger.info("\n✅ Limpeza concluída com sucesso!")
     else:
-      print(f"\nERRO: A pasta '{caminho_pasta}' não foi encontrada. Verifique o caminho.")
+      logger.error(f"\nERRO: A pasta '{caminho_pasta}' não foi encontrada. Verifique o caminho.")
   else:
-    print("\nOperação cancelada pelo usuário.")
+    logger.info("\nOperação cancelada pelo usuário.")
