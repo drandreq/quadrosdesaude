@@ -1,24 +1,35 @@
-# Gemini System Instructions: QUADROS DE SAÚDE Package
+# Memória do Projeto: QUADROS DE SAÚDE (v0.2.5)
 
-## 1. Core Identity
-You are an expert assistant for the `QUADROS DE SAÚDE` Python package, created by Dr. André Quadros.
+Este documento serve como a "Cápsula de Contexto" para IAs e desenvolvedores que retomarem este projeto. Ele resume a inteligência acumulada na Sprint de Produção.
 
-## 2. Package Purpose & Workflow
-The package's primary goal is to perform an ETL (Extract, Transform, Load) process on data from the Brazilian Public Health System (DATASUS).
+## 1. Identidade e Propósito
+Pacote criado por **Dr. André Quadros** para automatizar o ETL do DATASUS: `DBC -> DBF -> Parquet (DuckLake)`.
+- **Regra de Ouro:** A pasta `c_src` é intocável. Módulos C nativos são compilados via `build.py` e Poetry.
 
-The core workflow is as follows:
-1.  **Extract:** Download `.dbc` files directly from the `ftp.datasus.gov.br` server.
-2.  **Decompress:** Convert the proprietary `.dbc` files into the standard `.dbf` format.
-3.  **Transform:** Convert the `.dbf` files into compressed `.parquet` files.
+## 2. Arquitetura Atual (v0.2.5)
+O projeto evoluiu de scripts isolados para um pacote de software robusto:
 
-## 3. The End Goal
-The ultimate objective is to produce a collection of analysis-ready `.parquet` files. This collection forms a "data lake" (or "ducklake") that can be efficiently queried using tools like DuckDB.
+### Backend (`src/quadrosdesaude`)
+- **`InventarioFTP`**: Usa DuckDB local (`inventario_datasus.db`) para catalogar o FTP do Datasus, permitindo exploração ultra-rápida sem timeouts.
+- **`FTPDownloader`**: Implementa `threading.Event()` para permitir o cancelamento instantâneo de processos (Stop) sem criar threads zumbis.
+- **`logger.py`**: Centraliza logs em PT-BR para terminal e interface.
 
-## 4. Critical Dependencies (Read Carefully)
-The decompression step (`.dbc` to `.dbf`) relies on C source files located in the `c_src` directory.
-- **Directive:** These files are a critical, low-level dependency. **Do not, under any circumstances, suggest modifications to the files in the `c_src` folder.** Treat them as a black box that must not be edited.
+### Frontend (`ui_quadrosdesaude`)
+- **Multi-page Streamlit**: Interface profissional dividida por etapas do pipeline.
+- **`ui_utils.py`**: Contém o `StreamlitLogHandler` (logs em tempo real no expander) e `render_footer()` (marca d'água de autoria com Instagram).
 
-## 5. How to Answer
-- Base all your answers on the repository's code and documentation, if not available use Context7 tool to evaluate the coding proposal.
-- When a user asks about the workflow, clearly explain the `DBC -> DBF -> Parquet` pipeline.
-- If you are unsure about a specific implementation detail, state that you should refer to the package's source code for the most accurate information.
+### Distribuição (`scripts/`)
+- **Windows**: `.bat` para setup e execução automática.
+- **Unix/Linux (Manylinux)**: `build_manylinux.sh` via Docker utiliza a imagem oficial PyPA para gerar binários universais (.whl) compatíveis com qualquer distruição Linux.
+
+## 3. Estado da Conversão
+- **0.2.5 Publicada:** Versão está operacional no PyPI e GitHub.
+- **Logs de UI:** Injetados diretamente no orquestrador do Streamlit para feedback ao vivo.
+- **Dependências:** `streamlit` e `duckdb` são instaladas automaticamente pelo `pip install`.
+
+## 4. Próximos Passos Sugeridos
+- Implementar suporte a outros protocolos ou bases além do SINAN se necessário.
+- Ampliar a suíte de testes em `tests/` para cobertura de 90%+.
+
+---
+*Assinado: Antigravity AI (Pair Programming com Dr. André Quadros)*

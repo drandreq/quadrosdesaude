@@ -88,7 +88,9 @@ with col2:
                     with st.status("Preparando downloads em lote...") as status:
                         downloader = FTPDownloader()
                         for s in selecionados:
-                            st.write(f"Baixando: `{s['Pasta Origem']}/{s['Nome do Arquivo']}`...")
+                            msg_inicio = f"Baixando: `{s['Pasta Origem']}/{s['Nome do Arquivo']}`..."
+                            st.write(msg_inicio)
+                            logger_dl.info(f"⏳ INICIANDO >> {msg_inicio}")
                             
                             # Realiza o download individual (roda na thread principal, é seguro contra zombies se abortado)
                             # flag_pasta=True desativa o TQDM que polui o log e usa o log custom da biblioteca invés
@@ -98,8 +100,9 @@ with col2:
                                 pasta_destino=pasta_destino, 
                                 flag_pasta=True
                             )
+                            logger_dl.info(f"✅ SUCESSO >> Arquivo {s['Nome do Arquivo']} transferido para o computador.")
                             
-                        status.update(label="Fila concluída!", state="complete", expanded=False)
+                        status.update(label="Fila de downloads finalizada!", state="complete", expanded=False)
                         st.success(f"Arquivos salvos em: {pasta_destino}")
                 except BaseException as e:
                     downloader.evento_parada.set()

@@ -208,6 +208,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.pypirc.local
 
 # Marimo
 marimo/_static/
@@ -216,3 +217,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# AI Knowledge Items / Memory
+GEMINI.md
+KNOWLEDGE_ITEM_GUIDE.md

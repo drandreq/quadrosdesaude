@@ -52,6 +52,7 @@ script = "build.py"
 dev = [
     "pytest (>=8.4.2,<9.0.0)",
     "pytest-cov (>=7.0.0,<8.0.0)",
+    "twine (>=6.2.0,<7.0.0)",
 ]
 doc = [
     "mkdocs-material (>=9.6.22,<10.0.0)",
