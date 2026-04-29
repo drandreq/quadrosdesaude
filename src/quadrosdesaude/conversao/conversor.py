@@ -103,6 +103,10 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
   writer = None
   total_linhas_processadas = 0
 
+  lote_de_registros = None
+  df_lote = None
+  tabela_arrow = None
+
   try:
     tabela_dbf = DBF(caminho_dbf, parserclass = StringFieldParser)
     schema_mestre = tabela_dbf.field_names
@@ -118,6 +122,7 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
       writer.write_table(tabela_arrow)
       total_linhas_processadas += len(df_lote)
       del lote_de_registros, df_lote, tabela_arrow
+      lote_de_registros = df_lote = tabela_arrow = None
       gc.collect()
 
     if writer:
@@ -129,11 +134,14 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
     if total_linhas_cabecalho == linhas_no_parquet:
       return True
     else:
-      logger.error(f'Falha no dbf2parquet do arquivo {caminho_dbf}')
+      logger.error(f'Falha no dbf2parquet do arquivo {caminho_dbf}: Contagem de linhas divergente.')
       return False
   except Exception as e:
-    logger.error(f'Falha crítica ao processar dbf2parquet do arquivo {caminho_dbf}')
-    del lote_de_registros, df_lote, tabela_arrow
+    logger.error(f'Falha crítica ao processar dbf2parquet do arquivo {caminho_dbf}: {e}')
+    # Limpeza segura
+    if lote_de_registros is not None: del lote_de_registros
+    if df_lote is not None: del df_lote
+    if tabela_arrow is not None: del tabela_arrow
     gc.collect()
     if writer:
       writer.close()
