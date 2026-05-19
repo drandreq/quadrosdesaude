@@ -60,7 +60,7 @@ class FTPDownloader:
 		"""
 
     try:
-      with FTP(self.ftp_host) as ftp:
+      with FTP(self.ftp_host, timeout=180) as ftp:
         
         if usuario:
           ftp.login(user=usuario, passwd=senha)
@@ -131,7 +131,7 @@ class FTPDownloader:
       return f"Arquivo já baixado: {nome_arquivo}"
 
     try:
-      with FTP(self.ftp_host) as ftp:
+      with FTP(self.ftp_host, timeout=180) as ftp:
         if usuario:
           ftp.login(user=usuario, passwd=senha)
         else:
