@@ -30,11 +30,9 @@ def harmonizar_registos_em_fluxo(iterator_dbf, schema_mestre):
       dict: Um dicionário representando um registo harmonizado, garantindo que
         todas as chaves presentes em `schema_mestre` existem no registro-dicionário.
 	"""
-  valor_vazio = ''
+  template = {coluna: '' for coluna in schema_mestre}
   for registo in iterator_dbf:
-    registo_completo = {coluna: valor_vazio for coluna in schema_mestre}
-    registo_completo.update(registo)
-    yield registo_completo
+    yield {**template, **registo}
 
 def dbc2dbf(caminho_dbc: str, caminho_dbf: str) -> bool:
   """
