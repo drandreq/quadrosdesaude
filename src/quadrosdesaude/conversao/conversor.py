@@ -110,7 +110,6 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
   try:
     tabela_dbf = DBF(caminho_dbf, parserclass = StringFieldParser)
     schema_mestre = tabela_dbf.field_names
-    total_linhas_cabecalho = len(tabela_dbf)
 
     gerador_harmonizado = harmonizar_registos_em_fluxo( iter( tabela_dbf ), schema_mestre )
 
@@ -118,31 +117,52 @@ def dbf2parquet(caminho_dbf: str, destino_parquet: str = None, tamanho_lote: int
       df_lote = pl.DataFrame( lote_de_registros, schema_overrides={col: pl.Utf8 for col in schema_mestre} )
       tabela_arrow = df_lote.to_arrow()
       if writer is None:
-        writer = pq.ParquetWriter(destino_parquet, tabela_arrow.schema)
+        writer = pq.ParquetWriter(destino_parquet, tabela_arrow.schema, compression='zstd')
       writer.write_table(tabela_arrow)
       total_linhas_processadas += len(df_lote)
-      del lote_de_registros, df_lote, tabela_arrow
       lote_de_registros = df_lote = tabela_arrow = None
       gc.collect()
 
     if writer:
       writer.close()
 
-    linhas_no_parquet = pq.ParquetFile(destino_parquet).metadata.num_rows
-    duration = time.perf_counter() - start_time
-
-    if total_linhas_cabecalho == linhas_no_parquet:
+    if total_linhas_processadas == 0:
       return True
-    else:
-      logger.error(f'Falha no dbf2parquet do arquivo {caminho_dbf}: Contagem de linhas divergente.')
+
+    meta_parquet = pq.ParquetFile(destino_parquet).metadata
+    linhas_no_parquet = meta_parquet.num_rows
+    colunas_parquet = set(meta_parquet.schema.names)
+    colunas_dbf = set(schema_mestre)
+
+    if not colunas_dbf.issubset(colunas_parquet):
+      faltantes = colunas_dbf - colunas_parquet
+      logger.error(
+        f'Falha no dbf2parquet do arquivo {caminho_dbf}: colunas ausentes no Parquet: {faltantes}'
+      )
       return False
+
+    if total_linhas_processadas == linhas_no_parquet:
+      return True
+
+    logger.error(
+      f'Falha no dbf2parquet do arquivo {caminho_dbf}: '
+      f'linhas Processadas({total_linhas_processadas}) != Parquet({linhas_no_parquet}).'
+    )
+    return False
+  except MemoryError as e:
+    logger.error(f'Falha OOM em dbf2parquet ({caminho_dbf}): {e}')
+    return False
+  except FileNotFoundError as e:
+    logger.error(f'Arquivo DBF não encontrado em dbf2parquet ({caminho_dbf}): {e}')
+    return False
   except Exception as e:
     logger.error(f'Falha crítica ao processar dbf2parquet do arquivo {caminho_dbf}: {e}')
-    # Limpeza segura
-    if lote_de_registros is not None: del lote_de_registros
-    if df_lote is not None: del df_lote
-    if tabela_arrow is not None: del tabela_arrow
-    gc.collect()
-    if writer:
-      writer.close()
     return False
+  finally:
+    lote_de_registros = df_lote = tabela_arrow = None
+    if writer:
+      try:
+        writer.close()
+      except Exception:
+        pass
+    gc.collect()
